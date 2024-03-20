@@ -11,10 +11,6 @@ server.register(fastifyStatic, {
 const port = process.env.PORT || 1212;
 const host = process.env.HOST || 'localhost';
 
-server.get('/', (request, reply) => {
-    return reply.sendFile('index.html', join(process.cwd(), 'build'));
-});
-
 server.listen(port, host)
     .then((address) => {
         console.log('Server started at ' + address);

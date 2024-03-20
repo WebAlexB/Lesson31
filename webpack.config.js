@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlPlugin = require('html-webpack-plugin');
 const CssPlugin = require('mini-css-extract-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
     mode: 'development',
@@ -12,6 +13,13 @@ module.exports = {
     plugins: [
         new HtmlPlugin({ template: './src/index.html'}),
         new CssPlugin({ filename: 'styles[fullhash].css'}),
+        new CopyWebPackPlugin({
+            patterns: [
+                {
+                    from: 'static', to: 'static'
+                }
+            ]
+        })
     ],
     module: {
         rules: [

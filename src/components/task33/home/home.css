@@ -1,0 +1,14 @@
+.home-task33 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 80px;
+    height: 100vh;
+    text-decoration: underline;
+}
+
+.home-task33 {
+    display: flex;
+    justify-content: space-around;
+}
